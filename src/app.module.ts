@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { TasksModule } from './tasks/tasks.module';
 import { DirectiveLocation, GraphQLDirective } from 'graphql';
+import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -20,7 +21,8 @@ import { DirectiveLocation, GraphQLDirective } from 'graphql';
         ],
       },
     }),
-    TasksModule
+    TasksModule,
+    UsersModule
   ],
 })
 export class AppModule { }
