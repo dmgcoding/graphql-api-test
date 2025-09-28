@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @upper on FIELD_DEFINITION
+
+type Task {
+  id: Int!
+  name: String!
+  description: String
+}
+
+type Query {
+  tasks: [Task!]!
+}
+
+type Mutation {
+  createTask(createTaskInput: CreateTaskInput!): Task!
+  login(loginInput: UserLoginInput!): String!
+}
+
+input CreateTaskInput {
+  name: String!
+  description: String = ""
+}
+
+input UserLoginInput {
+  username: String!
+  pwd: String!
+}
